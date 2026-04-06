@@ -53,12 +53,64 @@ nav {
 /* HERO */
 .hero {
     height: 100vh;
-    background: linear-gradient(135deg, #00c6ff, #0072ff);
-    color: white;
+
+    /* FIXED FOREX BACKGROUND */
+    background:
+        url("images/forex-bg.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    text-align: center;
+    color: white;
+
+    padding: 0 20px;
+}
+.hero-content {
+    max-width: 700px;
+    width: 100%;
+}
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    opacity: 0.95;
+}
+
+/* BUTTON STYLE */
+.hero .btn {
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    padding: 12px 25px;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.hero .btn:hover {
+    transform: scale(1.05);
+}
+
+.hero {
+    animation: zoomBg 15s ease-in-out infinite alternate;
+}
+
+@keyframes zoomBg {
+    from { background-size: 100%; }
+    to { background-size: 110%; }
 }
 
 /* SERVICES */
@@ -113,6 +165,11 @@ nav {
 .contact {
     padding: 60px;
     text-align: center;
+}
+
+/* MAP */
+iframe {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 /* WHATSAPP */
